@@ -1,3 +1,3 @@
 <?php
 // Configuratiebestand voor API-instellingen
-define('API_KEY', 'YOUR_API_KEY_HERE');
+define('API_KEY', getenv('OPENAI_API_KEY'));

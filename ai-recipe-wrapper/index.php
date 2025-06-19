@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['ingredients'])) {
 try {
 $ingredients = explode(',', $_POST['ingredients']);
 $ingredients = array_map('trim', $ingredients);
-$wrapper = new AIWrapper(OPENAI_API_KEY);
+$wrapper = new AIWrapper(API_KEY);
 $recipe = $wrapper->generateRecipe($ingredients);
 } catch (Exception $e) {
 $error = "Error: " . $e->getMessage();
